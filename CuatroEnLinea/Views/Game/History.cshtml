@@ -1,0 +1,22 @@
+﻿<h1>Historial de Juegos</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Jugador 1</th>
+            <th>Jugador 2</th>
+            <th>Resultado</th>
+            <th>Duración</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var game in Model)
+        {
+            <tr>
+                <td>@game.Player1.Username</td>
+                <td>@game.Player2.Username</td>
+                <td>@game.Result</td>
+                <td>@(game.EndTime - game.StartTime)</td>
+            </tr>
+        }
+    </tbody>
+</table>
